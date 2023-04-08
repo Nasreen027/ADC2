@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/jquery-3.6.4.min.js"></script>
+    <title>Api</title>
+    
+</head>
+<body>
+    <!-- <input type="text" name="" id="v">
+    <br>
+    <br><button type="button" onclick="fun()">Find Weather</button>
+    <br><br> -->
+    <div class="container">
+
+    </div>
+    <script>
+        // function fun(){
+            // let city = $("#v").val();
+        $.ajax({
+            
+            url:"https://api.openweathermap.org/data/2.5/forecast?q=karachi&appid=387d3ca0cdbfa0de425f8a5c7e6ad676&units=metric",
+            type:"get",
+              success:function(data){
+                let ab = '';
+             ab += JSON.parse((JSON.stringify(data.city.name)))
+            for (let i in data.list){
+               
+            let kinza3 =  JSON.stringify(data.list[i]. dt_txt +"<br><hr>")
+            let kinza2 =  JSON.stringify(data.list[i].wind.deg +"<br>")
+           let kinza =  JSON.stringify(data.list[i].weather[0].main +"<br>") ;
+           let kinza4 =  JSON.stringify(data.list[i].weather[0].description +"<br>") ;
+           let kinza5 =  JSON.stringify(data.list[i].weather[0].icon+"<br>") ;
+           let l = JSON.parse(kinza);
+           let k = JSON.parse( kinza2);
+           let m = JSON.parse( kinza3);
+           let n = JSON.parse( kinza4);
+           let o = JSON.parse( kinza5);
+           ab += l;
+           ab += k;
+           ab += m;
+           ab += n;
+        //    ab += "<img src = "+o+" >" ;
+
+
+            }
+            $(".container").html(ab );}
+        })
+    // }
+        
+    </script>
+</body>
+</html>

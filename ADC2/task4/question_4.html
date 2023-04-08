@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+        border: 1px solid gray;
+        padding: 1rem;
+    }
+
+    button {
+        border: none;
+        background-color: rgb(110, 192, 236);
+        color: white;
+        padding: 1rem 1.5rem;
+        margin-left: 1.5rem;
+        border-radius: 0.1rem;
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+    .container_2 {
+        padding: 4rem 8rem;
+        color: white;
+    }
+
+    .section_1 {
+        display: none;
+        background-color: rgba(62, 149, 62, 0.592);
+        padding: 4rem;
+    }
+
+    .section_2 {
+        display: none;
+        background-color: rgba(95, 172, 217, 0.7);
+        padding: 2rem 4rem;
+    }
+
+    .section_3 {
+        display: none;
+        background-color: rgba(168, 127, 223, 0.717);
+        padding: 2rem 4rem;
+    }
+</style>
+
+<body>
+    <div class="container">
+
+        <button id="button_1" onclick="display_section_1()">Pakistan</button>
+        <button id="button_2" onclick="display_section_2()">China</button>
+        <button id="button_3" onclick="display_section_3()">Japan</button>
+
+    </div>
+
+    <div class="container_2">
+        <div class="section_1">
+            <h1>Pakistan</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur quam voluptas reprehenderit
+                voluptatem,
+                ratione dolorum ab voluptate alias cumque at itaque, cupiditate consequatur neque facere quidem
+                perspiciatis,
+                ipsam sint id!</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi recusandae distinctio non voluptates
+                voluptas
+                quisquam perferendis enim quidem laborum, provident repellendus! Consequatur consequuntur minus ex
+                blanditiis
+                voluptas similique reiciendis dolorem!</p>
+        </div>
+
+        <div class="section_2">
+            <h1>China</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur quam voluptas reprehenderit
+                voluptatem,
+                ratione dolorum ab voluptate alias cumque at itaque, cupiditate consequatur neque facere quidem
+                perspiciatis,
+                ipsam sint id!</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi recusandae distinctio non voluptates
+                voluptas
+                quisquam perferendis enim quidem laborum, provident repellendus! Consequatur consequuntur minus ex
+                blanditiis
+                voluptas similique reiciendis dolorem!</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus reprehenderit neque ut dolores.
+                Possimus illo dicta placeat consectetur accusantium vitae, voluptas, sequi voluptatem expedita mollitia,
+                quos cumque libero dolor obcaecati.</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus reprehenderit neque ut dolores.
+                    Possimus illo dicta placeat consectetur accusantium vitae, voluptas, sequi voluptatem expedita mollitia,
+                    quos cumque libero dolor obcaecati.</p>
+        </div>
+
+        <div class="section_3">
+            <h1>Japan</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur quam voluptas reprehenderit
+                voluptatem,
+                ratione dolorum ab voluptate alias cumque at itaque, cupiditate consequatur neque facere quidem
+                perspiciatis,
+                ipsam sint id!</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi recusandae distinctio non voluptates
+                voluptas
+                quisquam perferendis enim quidem laborum, provident repellendus! Consequatur consequuntur minus ex
+                blanditiis
+                voluptas similique reiciendis dolorem!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae reprehenderit nobis sint laudantium
+                placeat quis, labore fuga praesentium qui ipsum! Corrupti laudantium eligendi vitae voluptates fuga nemo
+                natus. Voluptatem, similique. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat, iure.</p>
+        </div>
+
+    </div>
+
+    <script>
+        let display_section_1 = () => {
+            document.querySelector(".section_1").style = "display:block";
+            document.querySelector(".section_2").style = "display:none";
+            document.querySelector(".section_3").style = "display:none";
+        }
+
+        let display_section_2 = () => {
+            document.querySelector(".section_2").style = "display:block";
+            document.querySelector(".section_1").style = "display:none";
+            document.querySelector(".section_3").style = "display:none";
+        }
+
+        let display_section_3 = () => {
+            document.querySelector(".section_3").style = "display:block";
+            document.querySelector(".section_1").style = "display:none";
+            document.querySelector(".section_2").style = "display:none";
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" href="/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+   <script src="/jquery-3.6.4.min.js"></script>
+    <style>
+        body{
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <label for="selectCountry" class="mt-5 ml-5 text-white">Select Country:</label>
+<select id="selectCountry" onchange="onCountrySelect()">
+  <option value="">Select a country</option>
+  <option value="Pakistan">Pakistan</option>
+  <option value="Saudi Arabia">Saudi Arabia</option>
+  <option value="Korea">Korea</option>
+</select>
+
+<div id="imgContainer" style="height: 500px;"></div>
+
+<script>
+  const onCountrySelect = () => {
+    const countrySelectElement = document.getElementById("selectCountry");
+    const selectedCountry = countrySelectElement.value;
+    const imgContainerElement = document.getElementById("imgContainer");
+
+    if (selectedCountry === "Pakistan") {
+      imgContainerElement.style.backgroundImage = "url('/images/pk.png')";
+    } else if (selectedCountry === "Saudi Arabia") {
+      imgContainerElement.style.backgroundImage = "url('/images/sa.png')";
+    } else if (selectedCountry === "Korea") {
+      imgContainerElement.style.backgroundImage = "url('/images/korea.png')";
+    } else {
+      imgContainerElement.style.backgroundImage = "none";
+    }
+    
+    imgContainerElement.style.backgroundSize = "cover";
+  };
+</script>
+
+</body>
+</html>

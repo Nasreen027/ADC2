@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      button{
+        border: none;
+        background-color: rgb(82, 206, 218);
+        padding: 1rem 1.5rem;
+        border-radius: 0.3rem;
+      }
+      .form{
+        margin-top: 2rem;
+        margin-left: 2rem;
+      }
+      .student_information{
+        margin-top: 2rem;
+        margin-left: 2rem;
+        border: 1px solid rgb(177, 175, 175);
+        width: max-content;
+        padding: 2rem;
+        display: none;
+      }
+      hr{
+        margin-bottom: 1rem;
+      }
+    </style>
+</head>
+<body>
+    <div class="form">
+        <label for="">Category name</label>
+        <br>
+        <input type="text" name="" id="category_name">
+        <br><br>
+
+        <label for="">Team name</label>
+        <br>
+        <input type="text" name="" id="team_name">
+        <br><br>
+
+        <label for="">Member count</label>
+        <br>
+        <input type="number " name="" id="member_count">
+        <br><br>
+
+        <button type="button" onclick="create_fields()">Submit</button>
+    </div>
+
+    <div class="student_information">
+        
+    </div>
+
+    <script>
+    function create_fields(){
+let b=document.getElementById("member_count").value;
+for(let i=0;i<b;i++){
+
+    let c=document.querySelector(".student_information").style="display:block";
+    let a=document.querySelector(".student_information").innerHTML+=
+    `<label for="">Student_ID</label>
+        <br>
+        <input type="text">
+        <br><br>
+
+        <label for="">Name</label>
+        <br>
+        <input type="text">
+        <br><br>
+
+        <label for="">Contact</label>
+        <br>
+        <input type="text">
+        <br><br>
+
+        <label for="">Email</label>
+        <br>
+        <input type="text">
+        <br><br>
+
+        <button>Submit</button>
+        <br><br>
+        <hr>
+        `;
+
+}
+        }
+    </script>
+</body>
+</html>
